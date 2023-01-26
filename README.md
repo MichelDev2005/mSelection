@@ -1,7 +1,4 @@
 # mSelection
-
-[![sampctl](https://shields.southcla.ws/badge/sampctl-mSelection-2f2f2f.svg?style=for-the-badge)](https://github.com/infin1tyy/mSelection)
-
 <!--
 Short description of your library, why it's useful, some examples, pictures or
 videos. Link to your forum release thread too.
