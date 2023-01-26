@@ -3,7 +3,7 @@
 // - D0erfler 2013	
 // - Kye 2013	
 //	
-// Version 1.1 R2	
+// Version 1.2 R2 - Update RC2: MichelDev#0001	
 
 /*Functions to be used	
 
@@ -122,7 +122,7 @@ stock PlayerText:mS_CreateCurrentPageTextDraw(playerid, Float:Xpos, Float:Ypos)
 	PlayerTextDrawFont(playerid, txtInit, 1);	
 	PlayerTextDrawSetShadow(playerid, txtInit, 0);	
     PlayerTextDrawSetOutline(playerid, txtInit, 1);	
-    PlayerTextDrawColor(playerid, txtInit, 0xACCBF1FF);	
+    PlayerTextDrawColour(playerid, txtInit, 0xACCBF1FF);	
     PlayerTextDrawShow(playerid, txtInit);	
     return txtInit;	
 }	
@@ -136,12 +136,12 @@ stock PlayerText:mS_CreatePlayerDialogButton(playerid, Float:Xpos, Float:Ypos, F
    	txtInit = CreatePlayerTextDraw(playerid, Xpos, Ypos, button_text);	
    	PlayerTextDrawUseBox(playerid, txtInit, 1);	
    	PlayerTextDrawBoxColor(playerid, txtInit, 0x000000FF);	
-   	PlayerTextDrawBackgroundColor(playerid, txtInit, 0x000000FF);	
+   	PlayerTextDrawBackgroundColour(playerid, txtInit, 0x000000FF);	
 	PlayerTextDrawLetterSize(playerid, txtInit, 0.4, 1.1);	
 	PlayerTextDrawFont(playerid, txtInit, 1);	
 	PlayerTextDrawSetShadow(playerid, txtInit, 0); // no shadow	
     PlayerTextDrawSetOutline(playerid, txtInit, 0);	
-    PlayerTextDrawColor(playerid, txtInit, 0x4A5A6BFF);	
+    PlayerTextDrawColour(playerid, txtInit, 0x4A5A6BFF);	
     PlayerTextDrawSetSelectable(playerid, txtInit, 1);	
     PlayerTextDrawAlignment(playerid, txtInit, 2);	
     PlayerTextDrawTextSize(playerid, txtInit, Height, Width); // The width and height are reversed for centering.. something the game does <g>	
@@ -160,7 +160,7 @@ stock PlayerText:mS_CreatePlayerHeaderTextDraw(playerid, Float:Xpos, Float:Ypos,
 	PlayerTextDrawFont(playerid, txtInit, 0);	
 	PlayerTextDrawSetShadow(playerid, txtInit, 0);	
     PlayerTextDrawSetOutline(playerid, txtInit, 1);	
-    PlayerTextDrawColor(playerid, txtInit, 0xACCBF1FF);	
+    PlayerTextDrawColour(playerid, txtInit, 0xACCBF1FF);	
     PlayerTextDrawShow(playerid, txtInit);	
     return txtInit;	
 }	
@@ -176,9 +176,9 @@ stock PlayerText:mS_CreatePlayerBGTextDraw(playerid, Float:Xpos, Float:Ypos, Flo
 	PlayerTextDrawFont(playerid, txtBackground, 0);	
 	PlayerTextDrawSetShadow(playerid, txtBackground, 0);	
     PlayerTextDrawSetOutline(playerid, txtBackground, 0);	
-    PlayerTextDrawColor(playerid, txtBackground,0x000000FF);	
+    PlayerTextDrawColour(playerid, txtBackground,0x000000FF);	
     PlayerTextDrawTextSize(playerid, txtBackground, Width, Height);	
-   	PlayerTextDrawBackgroundColor(playerid, txtBackground, bgcolor);	
+   	PlayerTextDrawBackgroundColour(playerid, txtBackground, bgcolor);	
     PlayerTextDrawShow(playerid, txtBackground);	
     return txtBackground;	
 }	
@@ -190,8 +190,8 @@ stock PlayerText:mS_CreateMPTextDraw(playerid, modelindex, Float:Xpos, Float:Ypo
 {	
     new PlayerText:txtPlayerSprite = CreatePlayerTextDraw(playerid, Xpos, Ypos, ""); // it has to be set with SetText later	
     PlayerTextDrawFont(playerid, txtPlayerSprite, TEXT_DRAW_FONT_MODEL_PREVIEW);	
-    PlayerTextDrawColor(playerid, txtPlayerSprite, 0xFFFFFFFF);	
-    PlayerTextDrawBackgroundColor(playerid, txtPlayerSprite, bgcolor);	
+    PlayerTextDrawColour(playerid, txtPlayerSprite, 0xFFFFFFFF);	
+    PlayerTextDrawBackgroundColour(playerid, txtPlayerSprite, bgcolor);	
     PlayerTextDrawTextSize(playerid, txtPlayerSprite, width, height); // Text size is the Width:Height	
     PlayerTextDrawSetPreviewModel(playerid, txtPlayerSprite, modelindex);	
     PlayerTextDrawSetPreviewRot(playerid,txtPlayerSprite, Xrot, Yrot, Zrot, mZoom);	
